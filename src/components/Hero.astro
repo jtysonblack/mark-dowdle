@@ -9,6 +9,7 @@
       muted
       loop
       playsinline
+      preload="auto"
       poster="/images/hero-poster-video.jpg"
     >
       <source src="/video/hero.mp4" type="video/mp4" />
@@ -18,9 +19,9 @@
 
   <div class="hero-content">
     <h1 class="hero-headline">
-      You Don't Know<br />
-      What You're<br />
-      <span class="hero-headline-accent">Capable Of.</span>
+      Every Step Is Evidence<br />
+      That the Story in<br />
+      Your Mind <span class="hero-headline-accent">Is Not True.</span>
     </h1>
 
     <p class="hero-body">
@@ -241,19 +242,20 @@
   }
 </style>
 
-<script>
-  const video = document.querySelector('.hero-video') as HTMLVideoElement;
-  if (video) {
-    const tryPlay = () => {
-      if (video.paused) video.play().catch(() => {});
-    };
-
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    var video = document.querySelector('.hero-video');
+    if (!video) return;
+    function tryPlay() {
+      if (video.paused) {
+        video.play().catch(function() {});
+      }
+    }
     video.addEventListener('canplay', tryPlay);
     video.addEventListener('loadeddata', tryPlay);
-    document.addEventListener('visibilitychange', () => {
+    document.addEventListener('visibilitychange', function() {
       if (!document.hidden) tryPlay();
     });
-    window.addEventListener('focus', tryPlay);
     tryPlay();
-  }
+  });
 </script>
