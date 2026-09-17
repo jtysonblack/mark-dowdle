@@ -1,0 +1,244 @@
+---
+---
+
+<section class="races" id="races">
+  <div class="races-header">
+    <div class="container">
+      <span class="section-label">Race Record</span>
+      <h2 class="section-heading races-heading">
+        We Chase the Path — From<br />Dawn Till <span class="accent">Dusk.</span>
+      </h2>
+    </div>
+  </div>
+
+  <div class="races-grid">
+    <div class="race-card">
+      <div class="race-card-number">01</div>
+      <div class="race-card-content">
+        <span class="race-card-label">Team USA — Backyard Ultra</span>
+        <h3 class="race-card-heading">306 Miles. 73 Hours. Last One Standing.</h3>
+        <p class="race-card-body">
+          A 4.167-mile loop, every hour on the hour, until every other athlete sat down and didn't get back up. Mark ran for three full days. He was hallucinating by hour 50. He kept going. Not because he knew he'd win. Because he hadn't found out yet what he was capable of.
+        </p>
+        <div class="race-card-stats">
+          <div class="race-card-stat">
+            <span class="race-card-stat-num">306</span>
+            <span class="race-card-stat-label">Miles</span>
+          </div>
+          <div class="race-card-stat">
+            <span class="race-card-stat-num">73h</span>
+            <span class="race-card-stat-label">Duration</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="race-card race-card--arrowhead">
+      <div class="race-card-bg">
+        <img src="/images/arrowhead-bg.jpg" alt="" class="race-card-bg-img" />
+        <div class="race-card-bg-overlay"></div>
+      </div>
+      <div class="race-card-number">02</div>
+      <div class="race-card-content">
+        <span class="race-card-label">Arrowhead 135 — 1st Place, 2026</span>
+        <h3 class="race-card-heading">135 Miles. Sub-Zero. Alone.</h3>
+        <p class="race-card-body">
+          One of the toughest ultramarathons in the world. 135 miles through northern Minnesota in the dead of winter — self-supported, through deep snow and temperatures far below freezing. Mark won it on his second attempt.
+        </p>
+        <div class="race-card-stats">
+          <div class="race-card-stat">
+            <span class="race-card-stat-num">135</span>
+            <span class="race-card-stat-label">Miles</span>
+          </div>
+          <div class="race-card-stat">
+            <span class="race-card-stat-num">-30°</span>
+            <span class="race-card-stat-label">Temp</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="races-quote">
+    <div class="container">
+      <p class="races-quote-text">
+        Whether it's personal milestones or team achievements, <span class="accent">we run with purpose, pushing limits and celebrating progress.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .races {
+    background: var(--bg-surface);
+    padding: 6rem 0;
+  }
+
+  .races-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .races-heading {
+    font-size: clamp(2rem, 4.5vw, 4rem);
+  }
+
+  .accent {
+    color: var(--accent);
+  }
+
+  .slash {
+    color: var(--accent);
+  }
+
+  .races-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+  }
+
+  .race-card {
+    background: var(--bg-primary);
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .race-card--arrowhead {
+    background: transparent;
+  }
+
+  .race-card-bg {
+    position: absolute;
+    inset: 0;
+  }
+
+  .race-card-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .race-card-bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(10, 10, 10, 0.55) 0%,
+      rgba(10, 10, 10, 0.7) 50%,
+      rgba(10, 10, 10, 0.85) 100%
+    );
+  }
+
+  .race-card--arrowhead .race-card-number,
+  .race-card--arrowhead .race-card-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .race-card-number {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 4rem;
+    color: var(--bg-elevated);
+    line-height: 1;
+    margin-bottom: 1.5rem;
+  }
+
+  .race-card-label {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  .race-card-heading {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    line-height: 1.1;
+    color: var(--text-primary);
+    margin-bottom: 1.25rem;
+  }
+
+  .race-card-body {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+  }
+
+  .race-card-stats {
+    display: flex;
+    gap: 2.5rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+  }
+
+  .race-card-stat-num {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 2rem;
+    color: var(--text-primary);
+    display: block;
+    line-height: 1;
+  }
+
+  .race-card-stat-label {
+    font-family: var(--font-display);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+    display: block;
+  }
+
+  .races-quote {
+    margin-top: 4rem;
+    margin-bottom: -2rem;
+    text-align: center;
+  }
+
+  .races-quote-text {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1rem, 1.8vw, 1.375rem);
+    line-height: 1.6;
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 0 auto;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    .races {
+      padding: 4rem 0;
+    }
+
+    .races-grid {
+      grid-template-columns: 1fr;
+      padding: 0 1rem;
+    }
+
+    .race-card {
+      padding: 2rem;
+    }
+
+    .races-quote-text {
+      padding: 0 1rem;
+    }
+  }
+</style>

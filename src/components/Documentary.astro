@@ -1,0 +1,116 @@
+---
+---
+
+<section class="doc" id="projects">
+  <div class="doc-inner">
+    <div class="doc-content">
+      <span class="section-label">Documentary</span>
+      <h2 class="section-heading doc-heading">
+        The Arrowhead<br /><span class="accent">Film</span>
+      </h2>
+      <p class="doc-body">
+        135 miles through northern Minnesota in the dead of winter. The Arrowhead documentary follows Mark's journey through one of the harshest endurance races in the world — sub-zero temperatures, full self-support, and the kind of isolation that strips everything back to what actually matters.
+      </p>
+      <p class="doc-body">
+        Filmed across the full race effort, the documentary captures the physical and mental reality of competing at the edge of what's possible in brutal winter conditions. Mark earned first place on his second attempt in 2026.
+      </p>
+      <a href="https://youtu.be/FL_7qfO1KVg" target="_blank" rel="noopener noreferrer" class="doc-cta">
+        Watch on YouTube <span>→</span>
+      </a>
+    </div>
+    <div class="doc-embed">
+      <div class="doc-video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/FL_7qfO1KVg"
+          title="The Arrowhead Film — Mark Dowdle"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .doc {
+    background: var(--bg-surface);
+    padding: 8rem 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .doc-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .doc-heading {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin-bottom: 2rem;
+  }
+
+  .accent {
+    color: var(--accent);
+  }
+
+  .doc-body {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 1.25rem;
+  }
+
+  .doc-cta {
+    font-family: var(--font-display);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 0.25rem;
+    margin-top: 0.75rem;
+    transition: gap 0.2s ease;
+  }
+
+  .doc-cta:hover {
+    gap: 0.75rem;
+  }
+
+  .doc-video-wrap {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+  }
+
+  .doc-video-wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .doc {
+      padding: 5rem 0;
+    }
+
+    .doc-inner {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      padding: 0 1rem;
+    }
+  }
+</style>

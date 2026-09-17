@@ -1,0 +1,94 @@
+---
+---
+
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-left">
+      <span class="section-label">Who Is Mark</span>
+      <h2 class="section-heading about-heading">
+        He Went to Find<br />the Edge of<br /><span class="accent">Himself.</span>
+      </h2>
+      <a href="#book" class="about-cta">Work With Mark <span>→</span></a>
+    </div>
+    <div class="about-right">
+      <p class="about-body">
+        At 3am on day three, Mark Dowdle was hallucinating. His legs had stopped feeling like legs hours ago. His body was negotiating with his mind to quit. He watched elite athletes sit down one by one and not get back up. He kept going. Not because he felt good. Because he needed to find out what he was actually capable of.
+      </p>
+      <p class="about-body">
+        That's why he's in rooms like yours. Not because he thinks you need to run 300 miles. But because somewhere along the way, most people quietly decided that this level of capacity was reserved for extreme people in extreme situations. It's not. His entire mission is to help you find that out.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    background: var(--bg-primary);
+    padding: 8rem 0;
+  }
+
+  .about-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .about-heading {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin-bottom: 2.5rem;
+  }
+
+  .accent {
+    color: var(--accent);
+  }
+
+  .slash {
+    color: var(--accent);
+  }
+
+  .about-body {
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+  }
+
+  .about-body:last-child {
+    margin-bottom: 0;
+  }
+
+  .about-cta {
+    font-family: var(--font-display);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 0.25rem;
+    transition: gap 0.2s ease;
+  }
+
+  .about-cta:hover {
+    gap: 0.75rem;
+  }
+
+  @media (max-width: 768px) {
+    .about {
+      padding: 5rem 0;
+    }
+
+    .about-inner {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      padding: 0 1rem;
+    }
+  }
+</style>

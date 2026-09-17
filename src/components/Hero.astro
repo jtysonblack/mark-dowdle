@@ -1,0 +1,238 @@
+---
+---
+
+<section class="hero">
+  <div class="hero-bg">
+    <video
+      class="hero-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      poster="/images/hero-poster-video.jpg"
+    >
+      <source src="/video/hero.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-overlay"></div>
+  </div>
+
+  <div class="hero-content">
+    <h1 class="hero-headline">
+      You Don't Know<br />
+      What You're<br />
+      <span class="hero-headline-accent">Capable Of.</span>
+    </h1>
+
+    <p class="hero-body">
+      At hour 50, Mark was hallucinating. Broken. Having full conversations with people who weren't there. He took one more step anyway. Not because he knew he'd win. Because he hadn't found out yet what he was actually capable of. That's what he brings to your team.
+    </p>
+
+    <div class="hero-credentials">
+      <span class="hero-team-usa">Team USA — Backyard Ultra</span>
+    </div>
+    <div class="hero-credentials hero-credentials--races">
+      <span>2026 BPN Go 1 More Backyard — 1st Place | 306 Miles</span>
+      <span>2026 Last Soul Ultra — 1st Place | 395.5 Miles</span>
+      <span>2026 Arrowhead 135 Champion</span>
+    </div>
+
+    <div class="hero-ctas">
+      <a href="#book" class="hero-btn hero-btn--primary">Book Me to Speak</a>
+      <a href="#about" class="hero-btn hero-btn--outline">Learn More</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <span class="hero-scroll-text">Scroll</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+  }
+
+  .hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(10, 10, 10, 0.1) 0%,
+      rgba(10, 10, 10, 0.2) 35%,
+      rgba(10, 10, 10, 0.6) 70%,
+      rgba(10, 10, 10, 0.95) 100%
+    );
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem 3.5rem;
+    width: 100%;
+  }
+
+  .hero-headline {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    line-height: 0.92;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-headline-accent {
+    color: var(--accent);
+    font-style: italic;
+  }
+
+  .hero-body {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin-bottom: 2rem;
+  }
+
+  .hero-credentials {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-team-usa {
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 0.35rem 0.75rem;
+    display: inline-block;
+  }
+
+  .hero-credentials--races {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .hero-btn {
+    font-family: var(--font-display);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.9rem 2rem;
+    transition: all 0.2s ease;
+    display: inline-block;
+  }
+
+  .hero-btn--primary {
+    background: var(--accent);
+    color: var(--bg-primary);
+  }
+
+  .hero-btn--primary:hover {
+    background: var(--accent-hover);
+  }
+
+  .hero-btn--outline {
+    border: 1px solid var(--text-muted);
+    color: var(--text-primary);
+  }
+
+  .hero-btn--outline:hover {
+    border-color: var(--text-primary);
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .hero-scroll-text {
+    font-family: var(--font-display);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    writing-mode: vertical-rl;
+  }
+
+  .hero-scroll-line {
+    width: 1px;
+    height: 40px;
+    background: var(--text-muted);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
+    50% { opacity: 1; transform: scaleY(1); }
+  }
+
+  @media (max-width: 768px) {
+    .hero-content {
+      padding: 0 1rem 4rem;
+    }
+
+    .hero-headline {
+      font-size: clamp(2.5rem, 12vw, 4.5rem);
+    }
+
+    .hero-credentials--races {
+      gap: 0.2rem;
+    }
+
+    .hero-ctas {
+      flex-direction: column;
+    }
+
+    .hero-btn {
+      text-align: center;
+    }
+
+    .hero-scroll {
+      display: none;
+    }
+  }
+</style>

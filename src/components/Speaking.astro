@@ -1,0 +1,199 @@
+---
+---
+
+<section class="speaking" id="speaking">
+  <div class="speaking-header">
+    <div class="container">
+      <div class="speaking-header-grid">
+        <div class="speaking-header-left">
+          <span class="section-label">Speaking & Leadership Development</span>
+          <h2 class="section-heading speaking-heading">
+            There Are Three Moments<br />in Every <span class="accent">Hard Thing</span>
+          </h2>
+          <p class="speaking-intro">
+            In 73 hours of racing, Mark found three moments that decide everything. He's since learned they show up in every hard thing, in every arena, every time. Every person in your room already knows these places. He's going to give them a name.
+          </p>
+        </div>
+        <div class="speaking-header-img">
+          <img src="/images/speaking-bg.jpg" alt="Mark speaking at Prior Lake High School — Laker Leaders program" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="moments">
+    <div class="container">
+      <div class="moments-grid">
+        <div class="moment">
+          <div class="moment-header">
+            <span class="moment-number">01</span>
+            <div class="moment-line"></div>
+            <h3 class="moment-title">The Comfort Quit</h3>
+          </div>
+          <p class="moment-body">
+            Most people don't quit when it's painful. They quit when it's comfortable enough to justify stopping. The Comfort Quit is invisible. It looks like being smart, knowing your limits, being realistic. The gap between who you are and who you could be lives entirely inside your comfort zone.
+          </p>
+        </div>
+
+        <div class="moment">
+          <div class="moment-header">
+            <span class="moment-number">02</span>
+            <div class="moment-line"></div>
+            <h3 class="moment-title">The Dark Moment</h3>
+          </div>
+          <p class="moment-body">
+            The Dark Moment is not a surprise. It is a guarantee. The question is whether you prepared for it or just hoped it wouldn't come. The athletes who quit at hour 50 weren't weaker. They just hadn't decided yet what they were running toward. Suffering without context breaks people. Suffering with meaning transforms them.
+          </p>
+        </div>
+
+        <div class="moment">
+          <div class="moment-header">
+            <span class="moment-number">03</span>
+            <div class="moment-line"></div>
+            <h3 class="moment-title">The Extra Step</h3>
+          </div>
+          <p class="moment-body">
+            The Extra Step is the one you take when every logical reason to stop has already presented itself. It's the decision nobody ever sees. Most people spend their whole lives circling this moment and never taking it. You don't find out what you're capable of by thinking about it.
+          </p>
+        </div>
+      </div>
+
+      <div class="speaking-cta-wrap">
+        <a href="#book" class="speaking-cta">Inquire About Booking <span>→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .speaking {
+    background: var(--bg-primary);
+    padding: 8rem 0;
+  }
+
+  .speaking-header {
+    margin-bottom: 5rem;
+  }
+
+  .speaking-header-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .speaking-header-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .speaking-heading {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin-bottom: 2rem;
+  }
+
+  .accent {
+    color: var(--accent);
+  }
+
+  .speaking-intro {
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    max-width: 640px;
+  }
+
+  .moments-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    margin-bottom: 4rem;
+  }
+
+  .moment {
+    background: var(--bg-primary);
+    padding: 2.5rem;
+  }
+
+  .moment-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .moment-number {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 3.5rem;
+    color: var(--bg-elevated);
+    line-height: 1;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .moment-line {
+    width: 40px;
+    height: 2px;
+    background: var(--accent);
+    margin-bottom: 1.25rem;
+  }
+
+  .moment-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--text-primary);
+  }
+
+  .moment-body {
+    font-size: 0.9375rem;
+    line-height: 1.75;
+    color: var(--text-secondary);
+  }
+
+  .speaking-cta-wrap {
+    text-align: center;
+  }
+
+  .speaking-cta {
+    font-family: var(--font-display);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--bg-primary);
+    background: var(--accent);
+    padding: 1rem 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+  }
+
+  .speaking-cta:hover {
+    background: var(--accent-hover);
+    gap: 0.75rem;
+  }
+
+  @media (max-width: 768px) {
+    .speaking {
+      padding: 5rem 0;
+    }
+
+    .speaking-header-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .moments-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .moment {
+      padding: 2rem;
+    }
+  }
+</style>

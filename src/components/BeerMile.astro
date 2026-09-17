@@ -1,0 +1,119 @@
+---
+---
+
+<section class="beer">
+  <div class="beer-inner">
+    <div class="beer-embed">
+      <div class="beer-video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/videoseries?list=PLEOX-d8mgr-ClVvjjUIUvBaiPNj9Zvhy5"
+          title="Beat My Beer Mile — Mark Dowdle"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+    <div class="beer-content">
+      <span class="section-label">Video Series</span>
+      <h2 class="section-heading beer-heading">
+        Beat My<br /><span class="accent">Beer Mile</span>
+      </h2>
+      <p class="beer-body">
+        A challenge series where Mark goes head-to-head against athletes, competitors, and anyone willing to step up — one beer per lap, one mile, no shortcuts. It's competitive, it's fun, and it's built a community of people who show up and go all in.
+      </p>
+      <p class="beer-body">
+        The full series lives on YouTube. New episodes drop as challengers line up.
+      </p>
+      <a href="https://youtube.com/playlist?list=PLEOX-d8mgr-ClVvjjUIUvBaiPNj9Zvhy5" target="_blank" rel="noopener noreferrer" class="beer-cta">
+        Watch the Full Series <span>→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .beer {
+    background: var(--bg-primary);
+    padding: 8rem 0;
+  }
+
+  .beer-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .beer-heading {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin-bottom: 2rem;
+  }
+
+  .accent {
+    color: var(--accent);
+  }
+
+  .beer-body {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 1.25rem;
+  }
+
+  .beer-cta {
+    font-family: var(--font-display);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 0.25rem;
+    margin-top: 0.75rem;
+    transition: gap 0.2s ease;
+  }
+
+  .beer-cta:hover {
+    gap: 0.75rem;
+  }
+
+  .beer-video-wrap {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+  }
+
+  .beer-video-wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .beer {
+      padding: 5rem 0;
+    }
+
+    .beer-inner {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      padding: 0 1rem;
+    }
+
+    .beer-embed {
+      order: 2;
+    }
+  }
+</style>

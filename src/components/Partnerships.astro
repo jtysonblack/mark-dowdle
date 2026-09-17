@@ -1,0 +1,270 @@
+---
+const partners = [
+  {
+    label: 'Official Nutrition Partner',
+    name: 'BPN — Bare Performance Nutrition',
+    body: "Mark's go-to for training nutrition. BPN builds supplements for athletes who do the work — no shortcuts, no fluff. Used throughout his Arrowhead 135 prep and race-day execution.",
+    code: 'MARK',
+    cta: 'Shop BPN',
+    url: 'https://www.bpnutrition.com',
+  },
+  {
+    label: 'Official Apparel Partner',
+    name: 'Rappid Run',
+    body: "Running gear built for runners who show up and do the work. Rappid focuses on reliable quality and fair pricing — gear that performs on casual runs, at local races, and during long-distance training.",
+    code: 'MARK10',
+    cta: 'Shop Rappid Run',
+    url: 'https://rappid.run',
+  },
+  {
+    label: 'Official Strength & Coaching Partner',
+    name: 'Jochum Strength',
+    body: "Serious programming for serious athletes. Jochum Strength provides the strength foundation that supports Mark's endurance training — building durability and power that holds up over long efforts.",
+    code: 'DOWDLE10',
+    cta: 'Shop Jochum Strength',
+    url: 'https://www.jochumstrength.com/online',
+  },
+  {
+    label: 'Community Partner',
+    name: 'Embrace North Minneapolis',
+    body: "A gym and community built in North Minneapolis around movement, discipline, and belonging. Mark's partnership with Embrace North connects his work to a community that shows up and does the hard things together.",
+    code: null,
+    cta: 'Try a Free 7-Day Trial',
+    url: 'https://embracenorthminneapolis.brandbot-checkout.com/marks-7-day-trial.html',
+  },
+];
+---
+
+<section class="partners" id="partnerships">
+  <div class="container">
+    <span class="section-label">Brand Partnerships</span>
+    <h2 class="section-heading partners-heading">
+      Brands That Back<br />the <span class="accent">Work</span>
+    </h2>
+    <p class="partners-intro">
+      Mark partners with brands that align with how he trains and lives. Every partnership is built on genuine use and real audiences — athletes, competitors, and people who take performance seriously.
+    </p>
+  </div>
+
+  <div class="partners-grid">
+    <div class="container">
+      <div class="partners-cards">
+        {partners.map(p => (
+          <div class="partner-card">
+            <span class="partner-label">{p.label}</span>
+            <h3 class="partner-name">{p.name}</h3>
+            <p class="partner-body">{p.body}</p>
+            <div class="partner-footer">
+              {p.code && (
+                <div class="partner-code">
+                  <span class="partner-code-label">Discount Code</span>
+                  <span class="partner-code-value">{p.code}</span>
+                </div>
+              )}
+              <a href={p.url} target="_blank" rel="noopener noreferrer" class="partner-cta">
+                {p.cta} <span>→</span>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <div class="partners-inquiry">
+    <div class="container">
+      <div class="inquiry-box">
+        <h3 class="inquiry-heading">Interested in Working Together?</h3>
+        <p class="inquiry-body">Mark is open to partnerships with brands that align with his values around performance, discipline, and authentic storytelling. Reach out to start a conversation.</p>
+        <a href="mailto:markdowdle20@gmail.com" class="inquiry-cta">Get in Touch <span>→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .partners {
+    background: var(--bg-surface);
+    padding: 8rem 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .partners-heading {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .accent {
+    color: var(--accent);
+  }
+
+  .partners-intro {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    max-width: 580px;
+    margin-bottom: 4rem;
+  }
+
+  .partners-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--border);
+  }
+
+  .partner-card {
+    background: var(--bg-primary);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .partner-label {
+    font-family: var(--font-display);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .partner-name {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    line-height: 1.15;
+  }
+
+  .partner-body {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    flex: 1;
+  }
+
+  .partner-footer {
+    margin-top: auto;
+    padding-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    min-height: 3.5rem;
+  }
+
+  .partner-code {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .partner-code-label {
+    font-family: var(--font-display);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .partner-code-value {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.875rem;
+    letter-spacing: 0.08em;
+    color: var(--text-primary);
+    background: var(--bg-elevated);
+    padding: 0.3rem 0.75rem;
+    border: 1px solid var(--border);
+  }
+
+  .partner-cta {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: gap 0.2s ease;
+    margin-left: auto;
+  }
+
+  .partner-cta:hover {
+    gap: 0.6rem;
+  }
+
+  .partners-inquiry {
+    margin-top: 4rem;
+  }
+
+  .inquiry-box {
+    border: 1px solid var(--border);
+    background: var(--bg-primary);
+    padding: 3rem;
+    text-align: center;
+  }
+
+  .inquiry-heading {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+  }
+
+  .inquiry-body {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    max-width: 560px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .inquiry-cta {
+    font-family: var(--font-display);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--bg-primary);
+    background: var(--accent);
+    padding: 0.85rem 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+  }
+
+  .inquiry-cta:hover {
+    background: var(--accent-hover);
+    gap: 0.75rem;
+  }
+
+  @media (max-width: 768px) {
+    .partners {
+      padding: 5rem 0;
+    }
+
+    .partners-cards {
+      grid-template-columns: 1fr;
+    }
+
+    .partner-card {
+      padding: 2rem;
+    }
+
+    .inquiry-box {
+      padding: 2rem;
+    }
+  }
+</style>

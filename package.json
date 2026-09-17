@@ -1,0 +1,15 @@
+{
+  "name": "mark-dowdle-build-5",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev --port 4325",
+    "start": "astro dev --port 4325",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^4.16.0"
+  }
+}

@@ -1,0 +1,137 @@
+---
+const testimonials = [
+  {
+    quote: "Mark did an amazing job of connecting with our players. His message was inspirational and showed our players that competition and the will to win is in each and every individual. I would highly recommend this to other college teams looking to gain an edge.",
+    name: 'Gary Fasching',
+    title: 'Head Football Coach — Saint John\'s University',
+  },
+  {
+    quote: "Mark challenged us to rethink our limits through discipline, resilience, and commitment — lessons that he earned in some of the most demanding conditions imaginable.",
+    name: 'LS Black Constructors',
+    title: 'Corporate Leadership Team',
+  },
+  {
+    quote: "It was a fun and memorable experience for all of us at Olaf. Learning from Mark and seeing his passion made it even more engaging.",
+    name: 'Noah Barrett',
+    title: 'Senior Linebacker — St. Olaf College',
+  },
+];
+---
+
+<section class="testimonials">
+  <div class="container">
+    <span class="section-label">What People Are Saying</span>
+    <h2 class="section-heading test-heading">
+      Trusted by Teams &<br /><span class="accent">Organizations</span>
+    </h2>
+
+    <div class="test-grid">
+      {testimonials.map((t, i) => (
+        <div class="test-card">
+          <div class="test-quote-mark">"</div>
+          <blockquote class="test-quote">{t.quote}</blockquote>
+          <div class="test-attr">
+            <div class="test-attr-line"></div>
+            <div>
+              <span class="test-attr-name">{t.name}</span>
+              <span class="test-attr-title">{t.title}</span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials {
+    background: var(--bg-primary);
+    padding: 8rem 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .test-heading {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin-bottom: 4rem;
+  }
+
+  .accent {
+    color: var(--accent);
+  }
+
+  .test-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+  }
+
+  .test-card {
+    background: var(--bg-primary);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .test-quote-mark {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 5rem;
+    color: var(--bg-elevated);
+    line-height: 0.8;
+    margin-bottom: 0.5rem;
+  }
+
+  .test-quote {
+    font-size: 0.9375rem;
+    line-height: 1.75;
+    color: var(--text-secondary);
+    font-style: normal;
+    flex: 1;
+    margin-bottom: 2rem;
+  }
+
+  .test-attr {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .test-attr-line {
+    width: 30px;
+    height: 2px;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .test-attr-name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    display: block;
+  }
+
+  .test-attr-title {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    display: block;
+    margin-top: 0.15rem;
+  }
+
+  @media (max-width: 768px) {
+    .testimonials {
+      padding: 5rem 0;
+    }
+
+    .test-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .test-card {
+      padding: 2rem;
+    }
+  }
+</style>

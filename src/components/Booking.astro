@@ -1,0 +1,264 @@
+---
+---
+
+<section class="booking" id="book">
+  <div class="booking-bg">
+    <div class="booking-bg-text">MARK<br />DOWDLE</div>
+  </div>
+
+  <div class="booking-content">
+    <div class="container">
+      <div class="booking-grid">
+        <div class="booking-left">
+          <span class="section-label">Book Mark</span>
+          <h2 class="section-heading booking-heading">
+            The Bell Is Ringing.<br />Are You Taking<br />the <span class="accent">Step?</span>
+          </h2>
+          <p class="booking-body">
+            The Comfort Quit is already whispering. The Dark Moment is already scheduled. Mark works with teams and organizations who want to identify the bell that's ringing in their world right now and take one more step. Every talk is built around your audience and grounded in three days of real, unscripted proof.
+          </p>
+        </div>
+
+        <div class="booking-right">
+          <form name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="booking-form">
+            <input type="hidden" name="form-name" value="booking" />
+            <p class="hidden" aria-hidden="true">
+              <label>Don't fill this out: <input name="bot-field" /></label>
+            </p>
+
+            <div class="form-group">
+              <label for="name" class="form-label">Name *</label>
+              <input type="text" id="name" name="name" required class="form-input" />
+            </div>
+
+            <div class="form-group">
+              <label for="company" class="form-label">Company / Organization</label>
+              <input type="text" id="company" name="company" class="form-input" />
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Email *</label>
+              <input type="email" id="email" name="email" required class="form-input" />
+            </div>
+
+            <div class="form-group">
+              <label for="phone" class="form-label">Phone</label>
+              <input type="tel" id="phone" name="phone" class="form-input" />
+            </div>
+
+            <div class="form-group">
+              <label for="inquiry-type" class="form-label">Inquiry Type *</label>
+              <select id="inquiry-type" name="inquiry-type" required class="form-input form-select">
+                <option value="" disabled selected>Select one</option>
+                <option value="speaking">Book to Speak</option>
+                <option value="brand">Brand Partnership</option>
+                <option value="podcast">Podcast</option>
+                <option value="interview">Interview</option>
+                <option value="media">Media Inquiry</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Message *</label>
+              <textarea id="message" name="message" required maxlength="600" rows="4" class="form-input form-textarea"></textarea>
+              <span class="form-char-count" id="char-count">0 / 600</span>
+            </div>
+
+            <button type="submit" class="form-submit">
+              Send Inquiry <span>→</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .booking {
+    position: relative;
+    background: var(--bg-surface);
+    padding: 8rem 0;
+    overflow: hidden;
+    border-top: 1px solid var(--border);
+  }
+
+  .booking-bg {
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .booking-bg-text {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(5rem, 14vw, 12rem);
+    text-transform: uppercase;
+    color: var(--bg-elevated);
+    letter-spacing: -0.02em;
+    line-height: 0.85;
+    text-align: left;
+    padding-left: 2rem;
+  }
+
+  .booking-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .booking-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .booking-heading {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 2rem;
+  }
+
+  .accent {
+    color: var(--accent);
+  }
+
+  .slash {
+    color: var(--accent);
+  }
+
+  .booking-body {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+  }
+
+  .booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .form-label {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .form-input {
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    padding: 0.75rem 1rem;
+    transition: border-color 0.2s ease;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+  }
+
+  .form-input:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+
+  .form-select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23666666' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+  }
+
+  .form-textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .form-char-count {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-align: right;
+  }
+
+  .form-submit {
+    font-family: var(--font-display);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--bg-primary);
+    background: var(--accent);
+    padding: 1rem 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+    align-self: flex-start;
+  }
+
+  .form-submit:hover {
+    background: var(--accent-hover);
+    gap: 0.75rem;
+  }
+
+  @media (max-width: 768px) {
+    .booking {
+      padding: 5rem 0;
+    }
+
+    .booking-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .form-submit {
+      width: 100%;
+    }
+  }
+</style>
+
+<script>
+  const textarea = document.getElementById('message') as HTMLTextAreaElement;
+  const counter = document.getElementById('char-count');
+
+  textarea?.addEventListener('input', () => {
+    if (counter) {
+      counter.textContent = `${textarea.value.length} / 600`;
+    }
+  });
+
+  const form = document.querySelector('.booking-form') as HTMLFormElement;
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+      form.innerHTML = '<div class="form-success"><p>Message sent. Mark will be in touch.</p></div>';
+    } catch {
+      form.innerHTML = '<div class="form-success"><p>Something went wrong. Email <a href="mailto:markdowdle20@gmail.com">markdowdle20@gmail.com</a> directly.</p></div>';
+    }
+  });
+</script>

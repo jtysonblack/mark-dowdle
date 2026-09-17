@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Thank You — Mark Dowdle">
+  <Nav />
+  <section class="thank-you">
+    <div class="container">
+      <h1 class="section-heading ty-heading">Message<br /><span class="accent">Sent</span><span class="slash">.</span></h1>
+      <p class="ty-body">Mark will be in touch. In the meantime, check out the <a href="https://youtu.be/FL_7qfO1KVg" target="_blank" rel="noopener noreferrer">Arrowhead documentary</a>.</p>
+      <a href="/" class="ty-link">← Back to Site</a>
+    </div>
+  </section>
+  <Footer />
+</Layout>
+
+<style>
+  .thank-you {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 8rem 0;
+  }
+
+  .ty-heading {
+    font-size: clamp(3rem, 6vw, 6rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .accent { color: var(--accent); }
+  .slash { color: var(--accent); }
+
+  .ty-body {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+  }
+
+  .ty-body a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .ty-link {
+    font-family: var(--font-display);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+</style>

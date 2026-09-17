@@ -1,0 +1,94 @@
+---
+const stats = [
+  { number: '395', unit: 'Miles', label: 'Last One Standing' },
+  { number: '94', unit: 'Hours', label: 'Last Soul Ultra' },
+  { number: '135', unit: 'Miles', label: '2026 Arrowhead Champion' },
+  { number: '-30°', unit: '', label: 'Arrowhead Conditions' },
+];
+---
+
+<section class="stats">
+  <div class="stats-inner">
+    {stats.map((stat, i) => (
+      <div class="stat">
+        <div class="stat-number-row">
+          <span class="stat-number">{stat.number}</span>
+          {stat.unit && <span class="stat-unit">{stat.unit}</span>}
+        </div>
+        <div class="stat-divider"></div>
+        <p class="stat-label">{stat.label}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .stats {
+    background: var(--bg-primary);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 4rem 0;
+  }
+
+  .stats-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .stat {
+    text-align: left;
+  }
+
+  .stat-number-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.35rem;
+  }
+
+  .stat-number {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(3rem, 5vw, 5rem);
+    line-height: 1;
+    color: var(--text-primary);
+    letter-spacing: -0.03em;
+  }
+
+  .stat-unit {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .stat-divider {
+    width: 40px;
+    height: 2px;
+    background: var(--accent);
+    margin: 1rem 0;
+  }
+
+  .stat-label {
+    font-family: var(--font-display);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    line-height: 1.4;
+  }
+
+  @media (max-width: 768px) {
+    .stats-inner {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem 1.5rem;
+      padding: 0 1rem;
+    }
+  }
+</style>
