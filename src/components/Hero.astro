@@ -210,6 +210,10 @@
     50% { opacity: 1; transform: scaleY(1); }
   }
 
+  .hero-video.loaded {
+    opacity: 1;
+  }
+
   @media (max-width: 768px) {
     .hero-content {
       padding: 0 1rem 4rem;
@@ -236,3 +240,20 @@
     }
   }
 </style>
+
+<script>
+  const video = document.querySelector('.hero-video') as HTMLVideoElement;
+  if (video) {
+    const tryPlay = () => {
+      if (video.paused) video.play().catch(() => {});
+    };
+
+    video.addEventListener('canplay', tryPlay);
+    video.addEventListener('loadeddata', tryPlay);
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) tryPlay();
+    });
+    window.addEventListener('focus', tryPlay);
+    tryPlay();
+  }
+</script>
