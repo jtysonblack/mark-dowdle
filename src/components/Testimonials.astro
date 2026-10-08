@@ -19,26 +19,35 @@ const testimonials = [
 ---
 
 <section class="testimonials">
-  <div class="container">
-    <span class="section-label">What People Are Saying</span>
-    <h2 class="section-heading test-heading">
-      Trusted by Teams &<br /><span class="accent">Organizations</span>
-    </h2>
+  <div class="test-layout">
+    <div class="test-left">
+      <div class="test-left-inner">
+        <span class="section-label">What People Are Saying</span>
+        <h2 class="section-heading test-heading">
+          Trusted by Teams &<br /><span class="accent">Organizations</span>
+        </h2>
 
-    <div class="test-grid">
-      {testimonials.map((t, i) => (
-        <div class="test-card">
-          <div class="test-quote-mark">"</div>
-          <blockquote class="test-quote">{t.quote}</blockquote>
-          <div class="test-attr">
-            <div class="test-attr-line"></div>
-            <div>
-              <span class="test-attr-name">{t.name}</span>
-              <span class="test-attr-title">{t.title}</span>
+        <div class="test-cards">
+          {testimonials.map((t) => (
+            <div class="test-card">
+              <div class="test-quote-mark">"</div>
+              <blockquote class="test-quote">{t.quote}</blockquote>
+              <div class="test-attr">
+                <div class="test-attr-line"></div>
+                <div>
+                  <span class="test-attr-name">{t.name}</span>
+                  <span class="test-attr-title">{t.title}</span>
+                </div>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
-      ))}
+      </div>
+    </div>
+
+    <div class="test-right">
+      <img src="/images/mark-road.jpg" alt="" class="test-right-img" />
+      <div class="test-right-overlay"></div>
     </div>
   </div>
 </section>
@@ -46,40 +55,53 @@ const testimonials = [
 <style>
   .testimonials {
     background: var(--bg-primary);
-    padding: 8rem 0;
     border-top: 1px solid var(--border);
+  }
+
+  .test-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 600px;
+  }
+
+  .test-left {
+    padding: 6rem 4rem 6rem 2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .test-left-inner {
+    max-width: 700px;
+    margin-left: auto;
   }
 
   .test-heading {
     font-size: clamp(2.5rem, 5vw, 4.5rem);
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 
   .accent {
     color: var(--accent);
   }
 
-  .test-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--border);
+  .test-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
 
   .test-card {
-    background: var(--bg-primary);
-    padding: 2.5rem;
-    display: flex;
-    flex-direction: column;
+    border-left: 2px solid var(--border);
+    padding-left: 1.5rem;
   }
 
   .test-quote-mark {
     font-family: var(--font-display);
     font-weight: 900;
-    font-size: 5rem;
+    font-size: 3rem;
     color: var(--bg-elevated);
     line-height: 0.8;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
   }
 
   .test-quote {
@@ -87,8 +109,7 @@ const testimonials = [
     line-height: 1.75;
     color: var(--text-secondary);
     font-style: normal;
-    flex: 1;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   .test-attr {
@@ -121,17 +142,40 @@ const testimonials = [
     margin-top: 0.15rem;
   }
 
-  @media (max-width: 768px) {
-    .testimonials {
-      padding: 5rem 0;
-    }
+  .test-right {
+    position: relative;
+    overflow: hidden;
+  }
 
-    .test-grid {
+  .test-right-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+  }
+
+  .test-right-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to right,
+      rgba(10, 10, 10, 0.6) 0%,
+      rgba(10, 10, 10, 0.15) 30%,
+      rgba(10, 10, 10, 0.05) 100%
+    );
+  }
+
+  @media (max-width: 768px) {
+    .test-layout {
       grid-template-columns: 1fr;
     }
 
-    .test-card {
-      padding: 2rem;
+    .test-left {
+      padding: 5rem 2rem;
+    }
+
+    .test-right {
+      height: 400px;
     }
   }
 </style>
